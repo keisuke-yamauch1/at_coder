@@ -1,4 +1,4 @@
-#include "../tasks/B03Supermarket1.cpp"
+#include "../tasks/A04BinaryRepresentation1.cpp"
 
 #include <iostream>
 #include <fstream>
@@ -29,7 +29,7 @@ namespace jhelper {
 
 signed main() {
     std::vector<jhelper::Test> tests = {
-            {"5\n100 250 350 400 600\n", "Yes\n", true, true},{"10\n50 150 250 350 450 550 650 750 850 950\n", "No\n", true, true},
+            {"13\n", "0000001101\n", true, true},{"37\n", "0000100101\n", true, true},{"1000\n", "1111101000\n", true, true},
     };
     bool allOK = true;
     int testID = 0;
@@ -49,7 +49,7 @@ signed main() {
             std::stringstream in(test.input);
             std::ostringstream out;
             std::clock_t start = std::clock();
-            B03Supermarket1 solver;
+            A04BinaryRepresentation1 solver;
             solver.solve(in, out);
              std::clock_t finish = std::clock();
             double currentTime = double(finish - start) / CLOCKS_PER_SEC;
